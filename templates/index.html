@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список користувачів</title>
+      <meta charset="utf-8">
+</head>
+<body>
+    <h1>Список користувачів</h1>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.username }} - {{ user.email }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Додати користувача</h2>
+    <form method="POST">
+        <label for="username">Ім'я користувача:</label>
+        <input type="text" name="username" required><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+        <input type="submit" value="Додати користувача">
+    </form>
+</body>
+</html>
